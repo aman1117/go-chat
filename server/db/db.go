@@ -17,7 +17,6 @@ func NewDatabase() (*Database, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	return &Database{db: db}, nil
 }
 
@@ -28,5 +27,6 @@ func (d *Database) Close() {
 
 // getter func
 func (d *Database) GetDB() *sql.DB {
+	// here d is struct and db is propery of 'd' struct
 	return d.db
 }
